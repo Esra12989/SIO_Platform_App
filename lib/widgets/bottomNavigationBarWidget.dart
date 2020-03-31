@@ -14,13 +14,13 @@ class BottomNavigationBarWidget extends StatefulWidget {
 }
 
 class _BottomNavigationBarWidgetState extends State<BottomNavigationBarWidget> {
-  int _selectedIndex = 3;
+  int _selectedIndex = 0;
 
   final List<Widget> _widgetOptions = [
-    CallUs(),
-    Branches(),
-    AboutSIO(),
     HomeScreen(),
+    AboutSIO(),
+    Branches(),
+    CallUs(),
   ];
 
   void _onItemTapped(int index) {
@@ -41,17 +41,11 @@ class _BottomNavigationBarWidgetState extends State<BottomNavigationBarWidget> {
         items: const <BottomNavigationBarItem>[
           BottomNavigationBarItem(
             icon: Icon(
-              Icons.phone,
+              Icons.home,
             ),
             title: Text(
-              'اتصل بنا',
+              'الرئيسية',
             ),
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(
-              Icons.place,
-            ),
-            title: Text('فروع المؤسسة'),
           ),
           BottomNavigationBarItem(
             icon: Icon(
@@ -63,10 +57,16 @@ class _BottomNavigationBarWidgetState extends State<BottomNavigationBarWidget> {
           ),
           BottomNavigationBarItem(
             icon: Icon(
-              Icons.home,
+              Icons.place,
+            ),
+            title: Text('فروع المؤسسة'),
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(
+              Icons.phone,
             ),
             title: Text(
-              'الرئيسية',
+              'اتصل بنا',
             ),
           ),
         ],

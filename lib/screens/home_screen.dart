@@ -28,7 +28,7 @@ class _HomeScreenState extends State<HomeScreen> {
     return Scaffold(
       //appBar widget
       appBar: PreferredSize(
-        preferredSize: Size.fromHeight(70.0),
+        preferredSize: Size.fromHeight(80.0),
         child: appBarWidget(),
       ),
       body: Column(
@@ -82,37 +82,37 @@ class _HomeScreenState extends State<HomeScreen> {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: <Widget>[
                   HomeButton(
+                    buttonText: 'المركز الاعلامي',
+                    onPressed: () {
+                      //here write the code to navigate to media center page.
+                    },
+                    IconImage: 'assets/images/k2.png',
+                  ),
+                  HomeButton(
                     buttonText: 'الخدمات الالكترونية',
                     onPressed: () {
                       //here write the code to navigate to electronic services page.
                     },
                     IconImage: 'assets/images/k1.png',
                   ),
-                  HomeButton(
-                    buttonText: 'المركز الاعلامي',
-                    onPressed: () {
-                      //here write the code to navigate to media center page.
-                    },
-                    IconImage: 'assets/images/k2.png',
-                  )
                 ],
               ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: <Widget>[
                   HomeButton(
-                    buttonText: 'البيانات المفتوحة',
-                    onPressed: () {
-                      //here write the code to navigate to open data page.
-                    },
-                    IconImage: 'assets/images/k3.png',
-                  ),
-                  HomeButton(
                     buttonText: 'البلاغات',
                     onPressed: () {
                       //here write the code to navigate to other  page.
                     },
                     IconImage: 'assets/images/k4.png',
+                  ),
+                  HomeButton(
+                    buttonText: 'البيانات المفتوحة',
+                    onPressed: () {
+                      //here write the code to navigate to open data page.
+                    },
+                    IconImage: 'assets/images/k3.png',
                   ),
                 ],
               ),

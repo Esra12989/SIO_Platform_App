@@ -10,6 +10,12 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      builder: (context, child) {
+        return Directionality(
+          textDirection: TextDirection.rtl,
+          child: child,
+        );
+      },
       title: 'Rai Platform',
       theme: ThemeData.light().copyWith(
         primaryColor: Color(0xFF0265a3),
