@@ -1,0 +1,34 @@
+import 'package:flutter/material.dart';
+
+import 'package:raiplatformapp/widgets/bottomNavigationBarWidget.dart';
+import 'dart:async';
+
+// here splash page, when application start it will view only 3 seconds.
+class SplashScreen extends StatelessWidget {
+  static const routeName = 'splash_screen';
+
+  @override
+  Widget build(BuildContext context) {
+    // set timer to three seconds than navigate to home page
+
+    Timer(
+        Duration(seconds: 3),
+        () => {
+              Navigator.pushReplacementNamed(
+                  context, BottomNavigationBarWidget.routeName),
+            });
+
+    return Scaffold(
+      body: Container(
+        color: Colors.white,
+        child: SafeArea(
+          child: Center(
+            child: Image(
+              image: AssetImage('assets/images/sio_logo.png'),
+            ),
+          ),
+        ),
+      ),
+    );
+  }
+}
