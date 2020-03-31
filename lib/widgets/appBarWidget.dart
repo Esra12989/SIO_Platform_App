@@ -16,7 +16,7 @@ class appBarWidget extends StatelessWidget {
               'assets/images/sio_logo.png',
               fit: BoxFit.fill,
               height: 50.0,
-              width: 200.0,
+              width: 160.0,
             ),
           ],
         ),

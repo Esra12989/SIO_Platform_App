@@ -27,7 +27,7 @@ class HomeButton extends StatelessWidget {
                 ),
                 Text(
                   buttonText,
-                  style: TextStyle(color: Colors.white),
+                  style: TextStyle(color: Colors.white, fontSize: 20),
                 ),
               ],
             ),
