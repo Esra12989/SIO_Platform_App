@@ -37,7 +37,7 @@ class appBarWidget extends StatelessWidget {
               ),
               IconButton(
                 icon: Icon(
-                  Icons.color_lens,
+                  Icons.apps,
                   size: 30.0,
                 ),
                 color: kButtonColor,
