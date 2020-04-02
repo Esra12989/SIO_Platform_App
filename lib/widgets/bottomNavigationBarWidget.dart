@@ -36,7 +36,7 @@ class _BottomNavigationBarWidgetState extends State<BottomNavigationBarWidget> {
       bottomNavigationBar: BottomNavigationBar(
         type: BottomNavigationBarType.fixed,
         elevation: 8,
-        unselectedItemColor: Colors.grey[900],
+        unselectedItemColor: Colors.white,
         backgroundColor: kButtonColor,
         items: const <BottomNavigationBarItem>[
           BottomNavigationBarItem(
@@ -71,7 +71,7 @@ class _BottomNavigationBarWidgetState extends State<BottomNavigationBarWidget> {
           ),
         ],
         currentIndex: _selectedIndex,
-        selectedItemColor: Colors.white,
+        selectedItemColor: Colors.grey[900],
         onTap: _onItemTapped,
       ),
     );
