@@ -12,11 +12,14 @@ class appBarWidget extends StatelessWidget {
         backgroundColor: Colors.white,
         title: Row(
           children: <Widget>[
-            Image.asset(
-              'assets/images/sio_logo.png',
-              fit: BoxFit.fill,
-              height: 50.0,
-              width: 160.0,
+            Expanded(
+              flex: 4,
+              child: Image.asset(
+                'assets/images/sio_logo.png',
+                fit: BoxFit.fill,
+                height: 50.0,
+                width: 220.0,
+              ),
             ),
           ],
         ),

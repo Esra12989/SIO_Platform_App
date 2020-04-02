@@ -6,6 +6,7 @@ class HomeButton extends StatelessWidget {
   final Function onPressed;
   final String IconImage;
   HomeButton({this.buttonText, this.onPressed, this.IconImage});
+
   @override
   Widget build(BuildContext context) {
     return Expanded(
@@ -29,7 +30,6 @@ class HomeButton extends StatelessWidget {
                   buttonText,
                   style: TextStyle(
                     color: Colors.white,
-                    fontSize: 15,
                   ),
                 ),
               ],
