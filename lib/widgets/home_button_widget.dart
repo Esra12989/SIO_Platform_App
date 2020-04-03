@@ -20,8 +20,8 @@ class HomeButton extends StatelessWidget {
               children: <Widget>[
                 Image.asset(
                   IconImage,
-                  width: 50,
-                  height: 50,
+                  width: 70,
+                  height: 70,
                 ),
                 SizedBox(
                   height: 8.0,
