@@ -25,21 +25,21 @@ class _ImagesSlideState extends State<ImagesSlide> {
     return GFCarousel(
       autoPlay: true,
       pagination: true,
-      viewportFraction: 1.0,
+      viewportFraction: 0.8,
       activeIndicator: kBlueColor,
       passiveIndicator: Colors.white,
       aspectRatio: 2.0,
       items: imageList.map(
         (url) {
           return GFImageOverlay(
-            height: 250,
-//
+            margin: EdgeInsets.symmetric(horizontal: 15.0),
+            height: 200,
             colorFilter: new ColorFilter.mode(
                 Colors.black.withOpacity(0.40), BlendMode.darken),
             borderRadius: BorderRadius.all(
-              Radius.circular(0),
+              Radius.circular(10.0),
             ),
-
+            border: Border.all(color: kBlueColor),
             child: Padding(
                 padding: EdgeInsets.only(top: 10, left: 0),
                 child: Column(
