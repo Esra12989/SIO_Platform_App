@@ -35,10 +35,17 @@ class appBarWidget extends StatelessWidget {
             onPressed: () {},
           ),
           //** Change language button **
-          IconButton(
+          FlatButton.icon(
             onPressed: () {
               //TODO:Write code to change language
             },
+            label: Text(
+              'EN',
+              style: TextStyle(
+                color: kBlueColor,
+                fontSize: 10.0,
+              ),
+            ),
             icon: Icon(Icons.language, size: 25.0, color: kBlueColor),
           ),
         ],
