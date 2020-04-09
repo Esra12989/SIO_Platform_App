@@ -39,7 +39,6 @@ class _ImagesSlideState extends State<ImagesSlide> {
             borderRadius: BorderRadius.all(
               Radius.circular(10.0),
             ),
-            border: Border.all(color: kBlueColor, width: 2),
             child: Padding(
                 padding: EdgeInsets.only(top: 10, left: 0),
                 child: Column(
