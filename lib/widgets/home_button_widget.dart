@@ -14,6 +14,7 @@ class HomeButton extends StatelessWidget {
       child: FlatButton(
         onPressed: onPressed,
         child: Container(
+          height: 120,
           margin: EdgeInsets.all(8.0),
           padding: EdgeInsets.all(8.0),
           child: Center(
@@ -22,7 +23,7 @@ class HomeButton extends StatelessWidget {
                 Icon(
                   IconImage,
                   color: kBlueColor,
-                  size: 50,
+                  size: 70,
                 ),
                 SizedBox(
                   height: 8.0,

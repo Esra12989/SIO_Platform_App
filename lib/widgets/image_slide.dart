@@ -28,28 +28,28 @@ class _ImagesSlideState extends State<ImagesSlide> {
       viewportFraction: 0.8,
       activeIndicator: kBlueColor,
       passiveIndicator: Colors.white,
-      aspectRatio: 2.0,
+      aspectRatio: 2.5,
       items: imageList.map(
         (url) {
           return GFImageOverlay(
-            margin: EdgeInsets.symmetric(horizontal: 15.0),
+            margin: EdgeInsets.symmetric(horizontal: 10.0),
             height: 200,
             colorFilter: new ColorFilter.mode(
                 Colors.black.withOpacity(0.40), BlendMode.darken),
             borderRadius: BorderRadius.all(
               Radius.circular(10.0),
             ),
-            border: Border.all(color: kBlueColor),
+            border: Border.all(color: kBlueColor, width: 2),
             child: Padding(
                 padding: EdgeInsets.only(top: 10, left: 0),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: <Widget>[
                     Padding(
-                        padding: EdgeInsets.only(
-                            right: 20.0, top: 100.0, left: 20.0),
+                        padding:
+                            EdgeInsets.only(right: 20.0, top: 60.0, left: 20.0),
                         child: Text(
-                          'سمو محافظ الأحساء يوجه بحملات ميدانية مكثفة للوقوف على تطبيق الإجراءات الاحترازية في استراحات واحة الأحساء.',
+                          'سمو محافظ الأحساء يوجه بحملات ميدانية مكثفة للوقوف على تطبيق الإجراءات الاحترازية.',
                           style: drawerheading(),
                           textDirection: TextDirection.rtl,
                         )),
