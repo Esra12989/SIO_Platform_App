@@ -1,8 +1,9 @@
+//هنا صفحة عن المؤسسة*
 import 'package:flutter/material.dart';
 import 'package:raiplatformapp/widgets/appBarWidget.dart';
 
-//هنا صفحة عن المؤسسة
 class AboutSIO extends StatefulWidget {
+  static const routeName = 'aboutSIO_screen';
   @override
   _AboutSIOState createState() => _AboutSIOState();
 }

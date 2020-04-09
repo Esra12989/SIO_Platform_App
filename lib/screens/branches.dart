@@ -1,8 +1,9 @@
+// هنا صفحة فروعنا*
 import 'package:flutter/material.dart';
 import 'package:raiplatformapp/widgets/appBarWidget.dart';
 
-// هنا صفحة فروعنا
 class Branches extends StatefulWidget {
+  static const routeName = 'branches_screen';
   @override
   _BranchesState createState() => _BranchesState();
 }

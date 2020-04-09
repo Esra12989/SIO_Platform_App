@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:raiplatformapp/style/style.dart';
 
+//* Home Buttons Widget *
 class HomeButton extends StatelessWidget {
   final String buttonText;
   final Function onPressed;
-  final String IconImage;
+  final IconData IconImage;
   HomeButton({this.buttonText, this.onPressed, this.IconImage});
 
   @override
@@ -18,10 +19,10 @@ class HomeButton extends StatelessWidget {
           child: Center(
             child: Column(
               children: <Widget>[
-                Image.asset(
+                Icon(
                   IconImage,
-                  width: 70,
-                  height: 70,
+                  color: kBlueColor,
+                  size: 50,
                 ),
                 SizedBox(
                   height: 8.0,
@@ -29,27 +30,28 @@ class HomeButton extends StatelessWidget {
                 Text(
                   buttonText,
                   style: TextStyle(
-                    color: Colors.white,
+                    color: kBlueColor,
+                    fontFamily: kArabicFontMedium,
                   ),
                 ),
               ],
             ),
           ),
           decoration: BoxDecoration(
-            color: kButtonColor,
+            color: Colors.white,
             border: Border.all(
-              width: 2,
+              width: 1,
               color: Colors.white,
             ),
             borderRadius: BorderRadius.all(Radius.circular(10.0)),
             boxShadow: [
               BoxShadow(
                 color: Colors.grey,
-                blurRadius: 30.0, // has the effect of softening the shadow
+                blurRadius: 10.0, // has the effect of softening the shadow
                 spreadRadius: 5.0, // has the effect of extending the shadow
                 offset: Offset(
-                  10.0, // horizontal, move right 10
-                  10.0, // vertical, move down 10
+                  5.0, // horizontal, move right 10
+                  5.0, // vertical, move down 10
                 ),
               )
             ],

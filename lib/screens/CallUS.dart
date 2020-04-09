@@ -1,8 +1,10 @@
+                     //هنا صفحة اتصل بنا*
 import 'package:flutter/material.dart';
 import 'package:raiplatformapp/widgets/appBarWidget.dart';
 
-//هنا صفحة اتصل بنا
+
 class CallUs extends StatefulWidget {
+  static const routeName = 'cullus_screen';
   @override
   _CallUsState createState() => _CallUsState();
 }

@@ -5,7 +5,7 @@ import 'package:raiplatformapp/screens/CallUS.dart';
 import 'package:raiplatformapp/screens/branches.dart';
 import 'package:raiplatformapp/screens/about_sio.dart';
 
-// //bottomNavigationBar widget(Bottom Menu)
+//* BottomNavigationBar widget(Bottom Menu)*
 class BottomNavigationBarWidget extends StatefulWidget {
   static const routeName = 'bottom_navigation_bar';
   @override
@@ -37,7 +37,8 @@ class _BottomNavigationBarWidgetState extends State<BottomNavigationBarWidget> {
         type: BottomNavigationBarType.fixed,
         elevation: 8,
         unselectedItemColor: Colors.white,
-        backgroundColor: kButtonColor,
+        selectedItemColor: Colors.grey[900],
+        backgroundColor: kBlueColor,
         items: const <BottomNavigationBarItem>[
           BottomNavigationBarItem(
             icon: Icon(
@@ -45,6 +46,7 @@ class _BottomNavigationBarWidgetState extends State<BottomNavigationBarWidget> {
             ),
             title: Text(
               'الرئيسية',
+              style: TextStyle(fontFamily: kArabicFontLight),
             ),
           ),
           BottomNavigationBarItem(
@@ -53,13 +55,17 @@ class _BottomNavigationBarWidgetState extends State<BottomNavigationBarWidget> {
             ),
             title: Text(
               'عن المؤسسة ',
+              style: TextStyle(fontFamily: kArabicFontLight),
             ),
           ),
           BottomNavigationBarItem(
             icon: Icon(
               Icons.place,
             ),
-            title: Text('فروع المؤسسة'),
+            title: Text(
+              'فروع المؤسسة',
+              style: TextStyle(fontFamily: kArabicFontLight),
+            ),
           ),
           BottomNavigationBarItem(
             icon: Icon(
@@ -67,11 +73,11 @@ class _BottomNavigationBarWidgetState extends State<BottomNavigationBarWidget> {
             ),
             title: Text(
               'اتصل بنا',
+              style: TextStyle(fontFamily: kArabicFontLight),
             ),
           ),
         ],
         currentIndex: _selectedIndex,
-        selectedItemColor: Colors.grey[900],
         onTap: _onItemTapped,
       ),
     );

@@ -1,58 +1,46 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/rendering.dart';
 import 'package:raiplatformapp/style/style.dart';
 
+//* App Bar Widget *
 class appBarWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.only(top: 10.0),
+      padding: const EdgeInsets.only(top: 5.0, bottom: 10.0),
       child: AppBar(
-        elevation: 3,
+        elevation: 1,
         backgroundColor: Colors.white,
         title: Row(
           children: <Widget>[
-            Expanded(
-              flex: 4,
-              child: Image.asset(
-                'assets/images/sio_logo.png',
-                fit: BoxFit.fill,
-                height: 50.0,
-                width: 220.0,
-              ),
+            // ** App Logo **
+            Image.asset(
+              'assets/images/sio_logo.png',
+              fit: BoxFit.fill,
+              height: 40.0,
+              width: 200.0,
+              alignment: Alignment.center,
             ),
           ],
         ),
         actions: <Widget>[
-          Row(
-            children: <Widget>[
-              FlatButton.icon(
-                onPressed: () {},
-                icon: Icon(Icons.language, size: 30.0, color: kButtonColor),
-                label: Text(
-                  'ENG',
-                  style: TextStyle(
-                      fontSize: 20.0,
-                      color: Color(0xfff1c40f),
-                      fontWeight: FontWeight.bold,
-                      textBaseline: TextBaseline.alphabetic),
-                ),
-              ),
-              IconButton(
-                icon: Icon(
-                  Icons.apps,
-                  size: 30.0,
-                ),
-                color: kButtonColor,
-                onPressed: () {
-                  // Implement change color here...
-                },
-              ),
-            ],
+          // ** Change theme color button **
+          IconButton(
+            icon: Icon(
+              Icons.format_color_fill,
+              size: 25.0,
+              color: kBlueColor,
+            ),
+            onPressed: () {},
           ),
-//        SizedBox(
-//          width: 70,
-//        ),
+          //** Change language button **
+          IconButton(
+            onPressed: () {
+              //TODO:Write code to change language
+            },
+            icon: Icon(Icons.language, size: 25.0, color: kBlueColor),
+          ),
         ],
       ),
     );
