@@ -12,7 +12,7 @@ class HomeButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return Expanded(
       child: Container(
-        height: MediaQuery.of(context).size.height * 0.2,
+        height: MediaQuery.of(context).size.height * 0.18,
         child: FlatButton(
           onPressed: onPressed,
           child: Container(
@@ -24,10 +24,10 @@ class HomeButton extends StatelessWidget {
                   Icon(
                     IconImage,
                     color: kBlueColor,
-                    size: MediaQuery.of(context).size.height * 0.1,
+                    size: MediaQuery.of(context).size.height * 0.09,
                   ),
                   SizedBox(
-                    height: 8.0,
+                    height: MediaQuery.of(context).size.height * 0.01,
                   ),
                   Text(
                     buttonText,
