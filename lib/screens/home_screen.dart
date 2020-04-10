@@ -20,11 +20,12 @@ class _HomeScreenState extends State<HomeScreen> {
         child: appBarWidget(),
       ),
       body: Column(
-        mainAxisAlignment: MainAxisAlignment.spaceAround,
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         crossAxisAlignment: CrossAxisAlignment.end,
         children: <Widget>[
           //news slide show widget.
           ImagesSlide(),
+
           // ** Buttons in home page. **
           Column(
             children: <Widget>[

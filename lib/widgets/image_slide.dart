@@ -33,7 +33,7 @@ class _ImagesSlideState extends State<ImagesSlide> {
         (url) {
           return GFImageOverlay(
             margin: EdgeInsets.symmetric(horizontal: 10.0),
-            height: 200,
+            height: MediaQuery.of(context).size.height * 0.3,
             colorFilter: new ColorFilter.mode(
                 Colors.black.withOpacity(0.40), BlendMode.darken),
             borderRadius: BorderRadius.all(
