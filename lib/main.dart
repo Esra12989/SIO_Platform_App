@@ -9,9 +9,11 @@ import 'package:raiplatformapp/screens/branches.dart';
 import 'package:flutter/services.dart';
 
 void main() {
+  WidgetsFlutterBinding.ensureInitialized();
   // to prevent the program to be in landscape only portrait up and down
   SystemChrome.setPreferredOrientations(
       [DeviceOrientation.portraitUp, DeviceOrientation.portraitDown]);
+
   runApp(MyApp());
 }
 
@@ -30,7 +32,7 @@ class MyApp extends StatelessWidget {
       title: 'Rai Platform',
       theme: ThemeData.light()
           .copyWith(primaryColor: kBlueColor, accentColor: kYellowColor),
-      home: SplashScreen(),
+      initialRoute: SplashScreen.routeName,
       //**Screen Roots**
       routes: {
         SplashScreen.routeName: (context) => SplashScreen(),

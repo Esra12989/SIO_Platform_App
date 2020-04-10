@@ -46,7 +46,7 @@ class _ImagesSlideState extends State<ImagesSlide> {
                   children: <Widget>[
                     Padding(
                         padding:
-                            EdgeInsets.only(right: 20.0, top: 50.0, left: 20.0),
+                            EdgeInsets.only(right: 20.0, top: 60.0, left: 20.0),
                         child: Text(
                           'سمو محافظ الأحساء يوجه بحملات ميدانية مكثفة للوقوف على تطبيق الإجراءات الاحترازية.',
                           style: drawerheading(),
