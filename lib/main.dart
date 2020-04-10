@@ -6,8 +6,14 @@ import 'package:raiplatformapp/widgets/bottomNavigationBarWidget.dart';
 import 'package:raiplatformapp/screens/CallUS.dart';
 import 'package:raiplatformapp/screens/about_sio.dart';
 import 'package:raiplatformapp/screens/branches.dart';
+import 'package:flutter/services.dart';
 
-void main() => runApp(MyApp());
+void main() {
+  // to prevent the program to be in landscape only portrait up and down
+  SystemChrome.setPreferredOrientations(
+      [DeviceOrientation.portraitUp, DeviceOrientation.portraitDown]);
+  runApp(MyApp());
+}
 
 class MyApp extends StatelessWidget {
   // This widget is the root of your application.
