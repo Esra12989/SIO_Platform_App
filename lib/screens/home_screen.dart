@@ -19,53 +19,55 @@ class _HomeScreenState extends State<HomeScreen> {
         preferredSize: Size.fromHeight(70.0),
         child: appBarWidget(),
       ),
-      body: Column(
-        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-        crossAxisAlignment: CrossAxisAlignment.end,
-        children: <Widget>[
-          //news slide show widget.
-          ImagesSlide(),
+      body: SafeArea(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          crossAxisAlignment: CrossAxisAlignment.end,
+          children: <Widget>[
+            //news slide show widget.
+            ImagesSlide(),
 
-          // ** Buttons in home page. **
-          Column(
-            children: <Widget>[
-              Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: <Widget>[
-                  HomeButton(
-                      buttonText: 'المركز الاعلامي',
-                      onPressed: () {
-                        //TODO:here write the code to navigate to media center page.
-                      },
-                      IconImage: Icons.video_library),
-                  HomeButton(
-                      buttonText: 'الخدمات الالكترونية',
-                      onPressed: () {
-                        //TODO:here write the code to navigate to electronic services page.
-                      },
-                      IconImage: Icons.important_devices),
-                ],
-              ),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: <Widget>[
-                  HomeButton(
-                      buttonText: 'البلاغات',
-                      onPressed: () {
-                        //TODO:here write the code to navigate to other  page.
-                      },
-                      IconImage: Icons.warning),
-                  HomeButton(
-                      buttonText: 'البيانات المفتوحة',
-                      onPressed: () {
-                        //TODO:here write the code to navigate to open data page.
-                      },
-                      IconImage: Icons.library_books),
-                ],
-              ),
-            ],
-          )
-        ],
+            // ** Buttons in home page. **
+            Column(
+              children: <Widget>[
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: <Widget>[
+                    HomeButton(
+                        buttonText: 'المركز الاعلامي',
+                        onPressed: () {
+                          //TODO:here write the code to navigate to media center page.
+                        },
+                        IconImage: Icons.video_library),
+                    HomeButton(
+                        buttonText: 'الخدمات الالكترونية',
+                        onPressed: () {
+                          //TODO:here write the code to navigate to electronic services page.
+                        },
+                        IconImage: Icons.important_devices),
+                  ],
+                ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: <Widget>[
+                    HomeButton(
+                        buttonText: 'البلاغات',
+                        onPressed: () {
+                          //TODO:here write the code to navigate to other  page.
+                        },
+                        IconImage: Icons.warning),
+                    HomeButton(
+                        buttonText: 'البيانات المفتوحة',
+                        onPressed: () {
+                          //TODO:here write the code to navigate to open data page.
+                        },
+                        IconImage: Icons.library_books),
+                  ],
+                ),
+              ],
+            )
+          ],
+        ),
       ),
     );
   }
