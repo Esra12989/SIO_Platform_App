@@ -30,8 +30,11 @@ class MyApp extends StatelessWidget {
         );
       },
       title: 'Rai Platform',
-      theme: ThemeData.light()
-          .copyWith(primaryColor: kBlueColor, accentColor: kYellowColor),
+      theme: ThemeData(
+        primaryColor: kBlueColor,
+        accentColor: kYellowColor,
+        fontFamily: kArabicFontMedium,
+      ),
       initialRoute: SplashScreen.routeName,
       //**Screen Roots**
       routes: {
