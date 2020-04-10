@@ -32,12 +32,12 @@ class _ImagesSlideState extends State<ImagesSlide> {
       items: imageList.map(
         (url) {
           return GFImageOverlay(
-            margin: EdgeInsets.symmetric(horizontal: 10.0),
+            margin: EdgeInsets.symmetric(horizontal: 5.0),
             height: MediaQuery.of(context).size.height * 0.3,
             colorFilter: new ColorFilter.mode(
-                Colors.black.withOpacity(0.40), BlendMode.darken),
+                Colors.black.withOpacity(0.50), BlendMode.darken),
             borderRadius: BorderRadius.all(
-              Radius.circular(10.0),
+              Radius.circular(8.0),
             ),
             child: Padding(
                 padding: EdgeInsets.only(top: 10, left: 0),
