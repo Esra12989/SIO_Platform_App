@@ -4,7 +4,12 @@ import 'package:flutter/rendering.dart';
 import 'package:raiplatformapp/style/style.dart';
 
 //* App Bar Widget *
-class appBarWidget extends StatelessWidget {
+class appBarWidget extends StatefulWidget {
+  @override
+  _appBarWidgetState createState() => _appBarWidgetState();
+}
+
+class _appBarWidgetState extends State<appBarWidget> {
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -19,7 +24,7 @@ class appBarWidget extends StatelessWidget {
               'assets/images/sio_logo.png',
               fit: BoxFit.fill,
               height: 40.0,
-              width: 200.0,
+              width: 150.0,
               alignment: Alignment.center,
             ),
           ],
