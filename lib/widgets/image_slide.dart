@@ -1,12 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
-
 import 'package:raiplatformapp/style/style.dart';
 import 'package:carousel_slider/carousel_slider.dart';
-
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:raiplatformapp/models/news.dart';
-
 import '../style/style.dart';
 
 final List<News> _news = [
@@ -86,7 +83,7 @@ class _ImagesSlideState extends State<ImagesSlide> {
                         style: TextStyle(
                           color: Colors.black,
                           fontFamily: kArabicFontMedium,
-                          fontWeight: FontWeight.w700,
+                          fontWeight: FontWeight.w600,
                         ),
                       ),
                       subtitle: Text(
