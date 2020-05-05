@@ -1,4 +1,4 @@
-//هنا صفحة عن المؤسسة*
+///هنا صفحة عن المؤسسة*
 import 'package:flutter/material.dart';
 import 'package:raiplatformapp/widgets/appBarWidget.dart';
 

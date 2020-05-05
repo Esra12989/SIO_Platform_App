@@ -1,30 +1,33 @@
 import 'package:flutter/material.dart';
 import 'package:raiplatformapp/style/style.dart';
 
-//* Home Buttons Widget *
+///* Home Buttons Widget *
 class HomeButton extends StatelessWidget {
   final String buttonText;
   final Function onPressed;
-  final IconData IconImage;
+  final String IconImage;
   HomeButton({this.buttonText, this.onPressed, this.IconImage});
 
   @override
   Widget build(BuildContext context) {
     return Expanded(
       child: Container(
-        height: MediaQuery.of(context).size.height * 0.18,
         child: FlatButton(
           onPressed: onPressed,
           child: Container(
-            margin: EdgeInsets.all(8.0),
-            padding: EdgeInsets.all(8.0),
+            height: MediaQuery.of(context).size.width * 0.26,
+            width: MediaQuery.of(context).size.width * 0.45,
+            margin: EdgeInsets.all(4.0),
+            padding: EdgeInsets.all(4.0),
             child: Center(
               child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
                 children: <Widget>[
-                  Icon(
+                  Image.asset(
                     IconImage,
-                    color: kBlueColor,
-                    size: MediaQuery.of(context).size.height * 0.09,
+                    width: MediaQuery.of(context).size.width * 0.25,
+                    height: MediaQuery.of(context).size.height * 0.08,
+                    fit: BoxFit.cover,
                   ),
                   SizedBox(
                     height: MediaQuery.of(context).size.height * 0.01,
@@ -34,26 +37,25 @@ class HomeButton extends StatelessWidget {
                     style: TextStyle(
                       color: kBlueColor,
                       fontFamily: kArabicFontMedium,
+                      fontWeight: FontWeight.bold,
+                      fontSize: 15,
                     ),
+                    textAlign: TextAlign.center,
                   ),
                 ],
               ),
             ),
             decoration: BoxDecoration(
               color: Colors.white,
-              border: Border.all(
-                width: 1,
-                color: Colors.white,
-              ),
-              borderRadius: BorderRadius.all(Radius.circular(10.0)),
+              borderRadius: BorderRadius.all(Radius.circular(0.0)),
               boxShadow: [
                 BoxShadow(
-                  color: Colors.grey,
-                  blurRadius: 10.0, // has the effect of softening the shadow
-                  spreadRadius: 5.0, // has the effect of extending the shadow
+                  color: Colors.black54,
+                  blurRadius: 5.0, // has the effect of softening the shadow
+                  spreadRadius: 0.0, // has the effect of extending the shadow
                   offset: Offset(
-                    5.0, // horizontal, move right 10
-                    5.0, // vertical, move down 10
+                    3.0, // horizontal, move right 10
+                    3.0, // vertical, move down 10
                   ),
                 )
               ],

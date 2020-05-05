@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:raiplatformapp/style/style.dart';
 
-//* App Bar Widget *
+///* App Bar Widget *
 class appBarWidget extends StatefulWidget {
   @override
   _appBarWidgetState createState() => _appBarWidgetState();

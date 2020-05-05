@@ -1,10 +1,10 @@
-//* Splash Screen *
+///* Splash Screen *
 import 'package:flutter/material.dart';
 
 import 'package:raiplatformapp/widgets/bottomNavigationBarWidget.dart';
 import 'dart:async';
 
-//  here splash page, when application start it will view only 3 seconds.
+///  here splash page, when application start it will view only 3 seconds.
 class SplashScreen extends StatefulWidget {
   static const routeName = 'splash_screen';
 
@@ -16,7 +16,8 @@ class _SplashScreenState extends State<SplashScreen> {
   @override
   void initState() {
     super.initState();
-    // set timer to three seconds than navigate to home page
+
+    /// set timer to three seconds than navigate to home page
 
     Timer(
         Duration(seconds: 3),
@@ -33,7 +34,7 @@ class _SplashScreenState extends State<SplashScreen> {
         color: Colors.white,
         child: SafeArea(
           child: Center(
-            //SIO Logo image
+            ///SIO Logo image
             child: Image(
               image: AssetImage('assets/images/sio_logo.png'),
             ),

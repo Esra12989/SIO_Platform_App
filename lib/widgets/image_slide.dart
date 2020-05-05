@@ -1,68 +1,134 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
-import 'package:getflutter/getflutter.dart';
-import 'package:getflutter/components/carousel/gf_carousel.dart';
-import 'package:getflutter/components/image/gf_image_overlay.dart';
-import 'package:raiplatformapp/style/style.dart';
 
-//* News SlideShow Widget *
+import 'package:raiplatformapp/style/style.dart';
+import 'package:carousel_slider/carousel_slider.dart';
+
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:raiplatformapp/models/news.dart';
+
+import '../style/style.dart';
+
+final List<News> _news = [
+  News(
+      id: 'n1',
+      title: 'يستمر لمدة شهر من اليوم تسجيل الأنشطة ذات الطبيعة التجارية',
+      imageUrl: 'assets/images/c1.jpg',
+      dateTime: '24-4-2030'),
+  News(
+      id: 'n2',
+      title:
+          'انطلاق الحملة الميدانية للتأكد من تطبيق الإجراءات الوقائية والاحترازية في محافظة الأحساء',
+      imageUrl: 'assets/images/c2.jpg',
+      dateTime: '19-8-2019'),
+  News(
+      id: 'n3',
+      title:
+          'سمو محافظ الأحساء يوجه بحملات ميدانية مكثفة للوقوف على تطبيق الإجراءات الاحترازية',
+      imageUrl: 'assets/images/c3.jpg',
+      dateTime: '27-4-2018'),
+  News(
+      id: 'n4',
+      title:
+          'تطبيق أنظمة الري الحديث يساعد في تقليل استهلاك المياه للأغراض الزراعية',
+      imageUrl: 'assets/images/c4.jpg',
+      dateTime: '22-3-2020'),
+  News(
+      id: 'n5',
+      title: 'انطلقت مساء اليوم السبت الموافق 26 رجب 1441هـ الحملة الميدانية',
+      imageUrl: 'assets/images/c5.jpg',
+      dateTime: '28-3-2019'),
+];
+
+///* News SlideShow Widget *
 class ImagesSlide extends StatefulWidget {
   @override
   _ImagesSlideState createState() => _ImagesSlideState();
 }
 
 class _ImagesSlideState extends State<ImagesSlide> {
-  //** List of Images **
-  final List<String> imageList = [
-    "assets/images/c1.jpg",
-    "assets/images/c2.jpg",
-    "assets/images/c3.jpg",
-    "assets/images/c4.jpg",
-    "assets/images/c5.jpg",
-  ];
+  @override
+
+  ///** List of Images **
+
+  final List<Widget> imageSliders = _news
+      .map((item) => Container(
+          child: Container(
+              margin: EdgeInsets.all(5.0),
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.all(Radius.circular(25.0)),
+                boxShadow: [
+                  BoxShadow(
+                    color: Colors.black54,
+                    blurRadius: 5.0, // has the effect of softening the shadow
+//                    spreadRadius:
+//                        10.0, // has the effect of extending the shadow
+                    offset: Offset(
+                      5.0, // horizontal, move right 10
+                      5.0, // vertical, move down 10
+                    ),
+                  )
+                ],
+              ),
+              child: ClipRRect(
+                borderRadius: BorderRadius.all(Radius.circular(20.0)),
+                child: GridTile(
+                  child: Image.asset(
+                    item.imageUrl,
+                    fit: BoxFit.cover,
+                    width: double.infinity,
+                  ),
+                  footer: Container(
+                    color: Colors.white,
+                    child: ListTile(
+                      title: Text(
+                        item.title,
+                        style: TextStyle(
+                          color: Colors.black,
+                          fontFamily: kArabicFontMedium,
+                          fontWeight: FontWeight.w700,
+                        ),
+                      ),
+                      subtitle: Text(
+                        item.dateTime,
+                        style: TextStyle(
+                            color: Colors.grey, fontFamily: kEnglishFontBold),
+                      ),
+                      trailing: IconButton(
+                        icon: FaIcon(
+                          FontAwesomeIcons.solidArrowAltCircleLeft,
+                          color: Colors.grey,
+                        ),
+                        onPressed: () {},
+                      ),
+                    ),
+                  ),
+                ),
+              ))))
+      .toList();
+
+  int _current = 0;
+
   @override
   Widget build(BuildContext context) {
-    return GFCarousel(
-      autoPlay: true,
-      pagination: true,
-      viewportFraction: 0.8,
-      activeIndicator: kBlueColor,
-      passiveIndicator: Colors.white,
-      aspectRatio: 2.5,
-      items: imageList.map(
-        (url) {
-          return GFImageOverlay(
-            margin: EdgeInsets.symmetric(horizontal: 5.0),
-            height: MediaQuery.of(context).size.height * 0.3,
-            colorFilter: new ColorFilter.mode(
-                Colors.black.withOpacity(0.50), BlendMode.darken),
-            borderRadius: BorderRadius.all(
-              Radius.circular(8.0),
-            ),
-            child: Padding(
-                padding: EdgeInsets.only(top: 10, left: 0),
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.center,
-                  children: <Widget>[
-                    Padding(
-                        padding:
-                            EdgeInsets.only(right: 20.0, top: 60.0, left: 20.0),
-                        child: Text(
-                          'سمو محافظ الأحساء يوجه بحملات ميدانية مكثفة للوقوف على تطبيق الإجراءات الاحترازية.',
-                          style: drawerheading(),
-                          textDirection: TextDirection.rtl,
-                        )),
-                  ],
-                )),
-            image: AssetImage(url),
-          );
-        },
-      ).toList(),
-      onPageChanged: (index) {
-        setState(() {
-          // index;
-        });
-      },
+    return Container(
+      child: Column(
+        children: <Widget>[
+          CarouselSlider(
+            options: CarouselOptions(
+                autoPlay: true,
+                aspectRatio: 1.3,
+                enlargeCenterPage: true,
+                viewportFraction: 1.0,
+                onPageChanged: (index, reason) {
+                  setState(() {
+                    _current = index;
+                  });
+                }),
+            items: imageSliders,
+          ),
+        ],
+      ),
     );
   }
 }

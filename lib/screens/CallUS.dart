@@ -1,7 +1,6 @@
-                     //هنا صفحة اتصل بنا*
+///هنا صفحة اتصل بنا*
 import 'package:flutter/material.dart';
 import 'package:raiplatformapp/widgets/appBarWidget.dart';
-
 
 class CallUs extends StatefulWidget {
   static const routeName = 'cullus_screen';

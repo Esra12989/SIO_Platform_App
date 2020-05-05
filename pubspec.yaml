@@ -19,6 +19,10 @@ dependencies:
   cupertino_icons: ^0.1.2
   getflutter: ^1.0.11
   font_awesome_flutter: ^8.8.1
+  gradient_bottom_navigation_bar: ^1.0.0+4
+  carousel_slider: ^2.1.0
+  provider: 3.0.0
+  flutter_icons: ^1.1.0
 
 
 dev_dependencies:

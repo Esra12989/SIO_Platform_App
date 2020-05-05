@@ -10,7 +10,8 @@ import 'package:flutter/services.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
-  // to prevent the program to be in landscape only portrait up and down
+
+  /// to prevent the program to be in landscape only portrait up and down
   SystemChrome.setPreferredOrientations(
       [DeviceOrientation.portraitUp, DeviceOrientation.portraitDown]);
 
@@ -18,12 +19,12 @@ void main() {
 }
 
 class MyApp extends StatelessWidget {
-  // This widget is the root of your application.
+  /// This widget is the root of application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       builder: (context, child) {
-        // To make application pages from right to left
+        /// To make application pages from right to left
         return Directionality(
           textDirection: TextDirection.rtl,
           child: child,
@@ -36,7 +37,8 @@ class MyApp extends StatelessWidget {
         fontFamily: kArabicFontMedium,
       ),
       initialRoute: SplashScreen.routeName,
-      //**Screen Roots**
+
+      ///**Screen Roots**
       routes: {
         SplashScreen.routeName: (context) => SplashScreen(),
         HomeScreen.routeName: (context) => HomeScreen(),

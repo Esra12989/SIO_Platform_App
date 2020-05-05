@@ -4,8 +4,11 @@ import 'package:raiplatformapp/screens/home_screen.dart';
 import 'package:raiplatformapp/screens/CallUS.dart';
 import 'package:raiplatformapp/screens/branches.dart';
 import 'package:raiplatformapp/screens/about_sio.dart';
+import 'package:gradient_bottom_navigation_bar/gradient_bottom_navigation_bar.dart';
+import '../style/style.dart';
+import 'package:flutter_icons/flutter_icons.dart';
 
-//* BottomNavigationBar widget(Bottom Menu)*
+///* BottomNavigationBar widget(Bottom Menu)*
 class BottomNavigationBarWidget extends StatefulWidget {
   static const routeName = 'bottom_navigation_bar';
   @override
@@ -33,47 +36,43 @@ class _BottomNavigationBarWidgetState extends State<BottomNavigationBarWidget> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: _widgetOptions[_selectedIndex],
-      bottomNavigationBar: BottomNavigationBar(
+      bottomNavigationBar: GradientBottomNavigationBar(
+        ///Gradient colors in BottomNavigationBar
+        backgroundColorStart: kBlueColor,
+        backgroundColorEnd: Color(0xff009DD6),
         type: BottomNavigationBarType.fixed,
-        elevation: 8,
-        unselectedItemColor: Colors.white,
-        selectedItemColor: Colors.grey[900],
-        backgroundColor: kBlueColor,
-        items: const <BottomNavigationBarItem>[
+        fixedColor: Colors.black54,
+        items: <BottomNavigationBarItem>[
           BottomNavigationBarItem(
-            icon: Icon(
-              Icons.home,
-            ),
+            icon: Icon(SimpleLineIcons.home),
             title: Text(
               'الرئيسية',
-              style: TextStyle(fontFamily: kArabicFontLight),
+              style: TextStyle(
+                  fontFamily: kArabicFontLight, fontWeight: FontWeight.bold),
             ),
           ),
           BottomNavigationBarItem(
-            icon: Icon(
-              Icons.info,
-            ),
+            icon: Icon(Ionicons.ios_information_circle_outline),
             title: Text(
               'عن المؤسسة ',
-              style: TextStyle(fontFamily: kArabicFontLight),
+              style: TextStyle(
+                  fontFamily: kArabicFontLight, fontWeight: FontWeight.bold),
             ),
           ),
           BottomNavigationBarItem(
-            icon: Icon(
-              Icons.place,
-            ),
+            icon: Icon(SimpleLineIcons.location_pin),
             title: Text(
               'فروع المؤسسة',
-              style: TextStyle(fontFamily: kArabicFontLight),
+              style: TextStyle(
+                  fontFamily: kArabicFontLight, fontWeight: FontWeight.bold),
             ),
           ),
           BottomNavigationBarItem(
-            icon: Icon(
-              Icons.phone,
-            ),
+            icon: Icon(SimpleLineIcons.phone),
             title: Text(
               'اتصل بنا',
-              style: TextStyle(fontFamily: kArabicFontLight),
+              style: TextStyle(
+                  fontFamily: kArabicFontLight, fontWeight: FontWeight.bold),
             ),
           ),
         ],
