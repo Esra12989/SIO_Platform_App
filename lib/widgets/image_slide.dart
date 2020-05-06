@@ -53,7 +53,7 @@ class _ImagesSlideState extends State<ImagesSlide> {
           child: Container(
               margin: EdgeInsets.all(5.0),
               decoration: BoxDecoration(
-                borderRadius: BorderRadius.all(Radius.circular(25.0)),
+                borderRadius: BorderRadius.all(Radius.circular(20.0)),
                 boxShadow: [
                   BoxShadow(
                     color: Colors.black54,
@@ -83,13 +83,14 @@ class _ImagesSlideState extends State<ImagesSlide> {
                         style: TextStyle(
                           color: Colors.black,
                           fontFamily: kArabicFontMedium,
-                          fontWeight: FontWeight.w600,
+                          fontWeight: FontWeight.w700,
                         ),
                       ),
                       subtitle: Text(
                         item.dateTime,
                         style: TextStyle(
-                            color: Colors.grey, fontFamily: kEnglishFontBold),
+                            color: Colors.grey[600],
+                            fontFamily: kEnglishFontBold),
                       ),
                       trailing: IconButton(
                         icon: FaIcon(
