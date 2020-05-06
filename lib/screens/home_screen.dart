@@ -41,7 +41,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     ),
                     FlatButton(
                       child: Text(
-                        'ENGLISH',
+                        'English',
                         style: TextStyle(
                             color: Colors.white,
                             fontFamily: kEnglishFontBold,
