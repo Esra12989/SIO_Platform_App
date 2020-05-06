@@ -83,7 +83,7 @@ class _ImagesSlideState extends State<ImagesSlide> {
                         style: TextStyle(
                           color: Colors.black,
                           fontFamily: kArabicFontMedium,
-                          fontWeight: FontWeight.w700,
+                          fontWeight: FontWeight.w600,
                         ),
                       ),
                       subtitle: Text(
