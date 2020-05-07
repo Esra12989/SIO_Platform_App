@@ -76,6 +76,7 @@ class _ImagesSlideState extends State<ImagesSlide> {
                     width: double.infinity,
                   ),
                   footer: Container(
+                    padding: EdgeInsets.only(bottom: 8.0),
                     color: Colors.white,
                     child: ListTile(
                       title: Text(
@@ -83,7 +84,7 @@ class _ImagesSlideState extends State<ImagesSlide> {
                         style: TextStyle(
                           color: Colors.black,
                           fontFamily: kArabicFontMedium,
-                          fontWeight: FontWeight.w600,
+                          fontWeight: FontWeight.w700,
                         ),
                       ),
                       subtitle: Text(
@@ -115,7 +116,7 @@ class _ImagesSlideState extends State<ImagesSlide> {
           CarouselSlider(
             options: CarouselOptions(
                 autoPlay: true,
-                aspectRatio: 1.3,
+                aspectRatio: 1.4,
                 enlargeCenterPage: true,
                 viewportFraction: 1.0,
                 onPageChanged: (index, reason) {

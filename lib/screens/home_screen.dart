@@ -65,7 +65,7 @@ class _HomeScreenState extends State<HomeScreen> {
 
           ///news slide show widget.
           SizedBox(
-            height: MediaQuery.of(context).size.height * 0.01,
+            height: MediaQuery.of(context).size.height * 0.02,
           ),
 
           /// ** Buttons in home page. **
